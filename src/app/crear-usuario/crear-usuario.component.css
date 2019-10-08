@@ -1,0 +1,19 @@
+.clear{
+    padding: 15px;
+}
+
+.requerido{
+    color: red;
+    font-weight: bolder;
+}
+.main-form{
+    margin: 0 auto;
+    width: 70%;
+
+
+}
+
+.btn-save{
+    cursor: pointer;
+    font-weight: bold;
+}

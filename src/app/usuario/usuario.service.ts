@@ -16,6 +16,9 @@ export class UsuarioService {
    return  this.http.get<UsuarioModel[]>("http://localhost:8080/getAllUsuarios")
   }
 
+   public eliminarUsuario(usuarioModel :UsuarioModel): void{
+      this.http.post("http://localhost:8080/deleteUsuario", JSON.stringify(usuarioModel)).subscribe();
+  }
 
 /*
   public getUsuarios(): Array<UsuarioModel>{

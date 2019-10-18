@@ -20,7 +20,14 @@ export class CrearUsuarioComponent implements OnInit {
   
   constructor(private crearUsuarioService: CrearUsuarioService, private router: Router) { 
 
-    this.usuario = new UsuarioModel();
+    alert(sessionStorage.getItem('usuario'));
+    if(sessionStorage.getItem('usuario')){
+      this.usuario = JSON.parse(sessionStorage.getItem('usuario'));  
+    }else{
+      this.usuario = new UsuarioModel();
+    }
+
+    
   }
 
   ngOnInit() {
@@ -48,6 +55,7 @@ export class CrearUsuarioComponent implements OnInit {
     }else{
       this.message = "Los campos son aboligatorios";
     }
+    sessionStorage.clear();
   }
 
 

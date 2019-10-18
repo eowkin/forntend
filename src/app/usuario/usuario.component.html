@@ -14,7 +14,8 @@
           <th>Primer Apellido</th>
           <th>Segundo Apellido</th>
           <th>Telefono</th>
-          <th>Direccion</th>  
+          <th>Direccion</th>
+          <th>Accion</th>  
         </tr>
       </thead>
       <tbody>
@@ -25,6 +26,8 @@
           <td>{{usuario.segundoApellido}}</td>
           <td>{{usuario.telefono}}</td>
           <td>{{usuario.direccion}}</td>
+          <td><img src="../../assets/write.png" class="editIcon" (click)="consultarEditarUsuario(usuario)">
+              <img src="../../assets/delete.png" class="editIcon" (click)="eliminarUsuario(usuario)"></td>
         </tr>
         
       </tbody>
